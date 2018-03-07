@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">TilesOfElinor</string>
+    <string name= "buffer"></string>>
+    <string-array name = "Dungeons">
+        <item>
+            Подземелье 1
+        </item>
+        <item>
+            Подземелье 2
+        </item>
+
+    </string-array>>
+
+    <string-array name="dungeon1">
+    <item>K100</item>
+    <item>K110</item>
+    <item>K200</item>
+    <item>K201</item>
+    <item>K210</item>
+    <item>K211</item>
+    </string-array>
+
+    <string-array name="dungeon2">
+        <item>F100</item>
+        <item>F110</item>
+        <item>F200</item>
+        <item>F201</item>
+        <item>F210</item>
+        <item>F211</item>
+    </string-array>
+    <string-array name="dungeon_rooms">
+        <item>K100</item>
+        <item>K110</item>
+        <item>K200</item>
+        <item>K201</item>
+        <item>K210</item>
+        <item>K211</item>
+    </string-array>
+
+</resources>
