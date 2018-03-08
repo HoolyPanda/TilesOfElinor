@@ -1,5 +1,7 @@
 package com.bignerdranch.android.tilesofelinor;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,8 +11,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-    public String dungeon;
+public class MainActivity extends AppCompatActivity{
+        // AppCompatActivity
+    public static  String dungeon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,22 +30,20 @@ public class MainActivity extends AppCompatActivity {
         DungeonList .setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View itemClicked, int position, long id) {
-                Toast.makeText(getApplicationContext(), ((TextView) itemClicked).getText(),Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), ((TextView) itemClicked).getText(),Toast.LENGTH_SHORT).show();
                 TextView tv = (TextView) itemClicked ;
-               // TextView textView1= findViewById(R.id.textView1) ;
-                setContentView(R.layout.dungeonback );
-                 // textView1.setText(((TextView) itemClicked).getText()) ;
-                //dungeon= String.valueOf(((TextView) itemClicked).getText() );
-               // R.string.buffer = (dungeon.toString()) ;
-               dungeon = tv.getText().toString();
-               // textView1.setText(tv.getText().toString()) ;
-                ToDungeon();
+
+                dungeon = tv.getText().toString();
+                if (dungeon == "Подземелье1"){
+                    dungeon= "K";
+                }else{dungeon= "F";}
             }
         });
 
     }
     public void ToDungeon(){
-         TextView textView1= findViewById(R.id.textView1) ;
-        textView1.setText(dungeon);
+        Intent intent = new Intent(MainActivity.this, WelcomeToTheDungeon.class);
+        startActivity(intent);
+
     }
 }
