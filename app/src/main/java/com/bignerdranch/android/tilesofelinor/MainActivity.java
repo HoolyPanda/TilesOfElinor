@@ -12,38 +12,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
-        // AppCompatActivity
     public static  String dungeon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hello);
-
        ListView DungeonList = findViewById(R.id.dungeonlist) ;
-        String[] Dungeons = getResources().getStringArray(R.array.Dungeons);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,  android.R.layout.simple_list_item_1, Dungeons);
-        DungeonList.setAdapter(adapter);
-        Main(DungeonList );
+       String[] Dungeons = getResources().getStringArray(R.array.Dungeons);
+       ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,  android.R.layout.simple_list_item_1, Dungeons);
+       DungeonList.setAdapter(adapter);
+        Main(DungeonList);
     }
     public void Main(ListView DungeonList){
-       //final TextView textView1= findViewById(R.id.textView1 ) ;
         DungeonList .setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View itemClicked, int position, long id) {
-                //Toast.makeText(getApplicationContext(), ((TextView) itemClicked).getText(),Toast.LENGTH_SHORT).show();
                 TextView tv = (TextView) itemClicked ;
-
                 dungeon = tv.getText().toString();
                 if (dungeon == "Подземелье1"){
                     dungeon= "K";
                 }else{dungeon= "F";}
+           ToDungeon();
             }
         });
-
     }
     public void ToDungeon(){
         Intent intent = new Intent(MainActivity.this, WelcomeToTheDungeon.class);
         startActivity(intent);
-
     }
 }

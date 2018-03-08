@@ -11,16 +11,21 @@
 
     </string-array>>
 
-    <string-array name="dungeon1">
-    <item>K100</item>
-    <item>K110</item>
-    <item>K200</item>
-    <item>K201</item>
-    <item>K210</item>
-    <item>K211</item>
+    <string-array name="K">
+
+        <item>Это нулевая комната</item>
+        <item>это перавя(вторая нулевая)строка</item>
+        <item>Это вторая нулевая комната </item>
+        <item> было нажато лево 2</item>
+        <item> было нажато право 3 </item>
+        <item> было нажато лево лево 4 </item>
+        <item> было нажато лево право 6 </item>
+        <item> было нажато право лево 7</item>
+        <item> было нажато право право 8</item>>
+
     </string-array>
 
-    <string-array name="dungeon2">
+    <string-array name="F">
         <item>F100</item>
         <item>F110</item>
         <item>F200</item>
