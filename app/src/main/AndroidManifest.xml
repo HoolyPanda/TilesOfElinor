@@ -20,6 +20,4 @@
         <activity android:name=".DungeomMap"></activity>
     </application>
 
-
-
 </manifest>

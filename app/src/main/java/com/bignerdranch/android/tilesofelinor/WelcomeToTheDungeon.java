@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 public class WelcomeToTheDungeon extends Activity {
     int room=2;
-    String[] Rooms= new String[0];
-    String dungeon=MainActivity .dungeon ;
+
+
     int i=0;
 
     boolean equals;
@@ -29,17 +29,9 @@ public class WelcomeToTheDungeon extends Activity {
         Left = findViewById(R.id.totheleft);
         Right= findViewById(R.id.totheright);
         final TextView textView1= findViewById(R.id.textView1) ;
-
-
-        Check();
-        switch (i){
-            case (0):{
-                Rooms = getResources().getStringArray(R.array.K );
-                break;}
-            case (1):{
-                Rooms = getResources().getStringArray(R.array.F );
-                break;}
-        }
+        String dungeon = MainActivity.dungeon ;
+        int file= getResources().getIdentifier(dungeon,"array",getPackageName());
+        final String[] Rooms = getResources().getStringArray(file);
         textView1.setText(Rooms[room]);
 
 
@@ -55,29 +47,24 @@ public class WelcomeToTheDungeon extends Activity {
         Left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                room= room+(room-1);
-                GoLeft(textView1,Rooms);
+               room= room+(room-1);
+               if (room>8) {
+                   room = 0;
+               }
+               Go(textView1,Rooms);
             }
         });
         Right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 room=(room+room);
-                GoRight(textView1,Rooms);
+                if(room>8){
+                    room=0;
+                }
+               Go(textView1,Rooms);
             }});
     }
-    public  void   Check(){
-        boolean equality= false;
-        String[] DungeonList=  new String[0];
-        DungeonList = getResources().getStringArray(R.array.Dungeons);
-        while((equality !=true)|(i>DungeonList.length )){
-            equality = dungeon.equals(DungeonList[i]);
-            if (equality == false){
-                i++;
-            }
-
-        }
-    }
-    public void GoLeft (TextView textView1, String[] Rooms){textView1.setText(Rooms[room]);}
-    public void GoRight(TextView textView1, String[] Rooms){textView1.setText(Rooms[room]);}
+    public void Go (TextView textView1, String[] Rooms){
+        try {textView1.setText(Rooms[room]);}
+        catch (UnknownError e){textView1.setText(Rooms[0]);}}
 }

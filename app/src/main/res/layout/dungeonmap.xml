@@ -13,5 +13,5 @@
         android:layout_height="fill_parent"
         android:contentDescription="@android:string/yes"
         android:visibility="visible"
-       android:src="@drawable/skyrimmap"  />
+       />
 </android.support.constraint.ConstraintLayout>

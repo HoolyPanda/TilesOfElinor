@@ -2,20 +2,21 @@
     <string name="app_name">TilesOfElinor</string>
     <string name= "buffer"></string>>
     <string name="map">Карта</string>>
+
     <string-array name = "Dungeons">
 
         <item>
-            Подземелье 1
+            Dungeon1
         </item>
         <item>
-            Подземелье 2
+            Dungeon2
         </item>
 
     </string-array>
 
-    <string-array name="K">
+    <string-array name = "dungeon1">
 
-        <item>Это нулевая комната</item>
+        <item>Вы покаинули подземелье</item>
         <item>это перавя(вторая нулевая)строка</item>
         <item>Это вторая нулевая комната </item>
         <item> было нажато лево 2</item>
@@ -23,11 +24,12 @@
         <item> было нажато лево лево 4 </item>
         <item> было нажато лево право 6 </item>
         <item> было нажато право лево 7</item>
-        <item> было нажато право право 8</item>>
+        <item> было нажато право право 8</item>
+        <item>8</item>>
 
     </string-array>
 
-    <string-array name="F">
+    <string-array name="dungeon2">
         <item>F100</item>
         <item>F110</item>
         <item>F200</item>
