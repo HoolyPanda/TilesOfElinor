@@ -8,7 +8,6 @@ import android.os.Bundle;
  */
 
 public class DungeomMap extends Activity {
-    int[] = {};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
