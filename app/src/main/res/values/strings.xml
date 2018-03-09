@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">TilesOfElinor</string>
     <string name= "buffer"></string>>
+    <string name="map">Карта</string>>
     <string-array name = "Dungeons">
+
         <item>
             Подземелье 1
         </item>
@@ -9,7 +11,7 @@
             Подземелье 2
         </item>
 
-    </string-array>>
+    </string-array>
 
     <string-array name="K">
 
@@ -41,5 +43,4 @@
         <item>K210</item>
         <item>K211</item>
     </string-array>
-
 </resources>

@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bignerdranch.android.tilesofelinor.MainActivity">
+    <ListView
 
-    <LinearLayout
-        android:id="@+id/layout1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ListView
-
-            android:id="@+id/dungeonlist"
-            android:layout_width="wrap_content"
-            android:layout_height="524dp"
-            android:clickable="true"
-            android:focusable="false"
-            android:focusableInTouchMode="false"
-             />
-    </LinearLayout>
+        android:id="@+id/dungeonlist"
+        android:layout_width="wrap_content"
+        android:layout_height="524dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
 </android.support.constraint.ConstraintLayout>
