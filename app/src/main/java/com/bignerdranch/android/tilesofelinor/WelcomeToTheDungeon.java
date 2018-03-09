@@ -17,7 +17,6 @@ public class WelcomeToTheDungeon extends Activity {
     int i=0;
 
     boolean equals;
-    //DungeonList = getResources().getStringArray(R.array.Dungeons);
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,11 +55,6 @@ public class WelcomeToTheDungeon extends Activity {
         Left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              /*  if (room == 1){
-                    room=2;
-                    textView1.setText(Rooms[room]);
-                }
-                else {}*/
                 room= room+(room-1);
                 GoLeft(textView1,Rooms);
             }
@@ -68,10 +62,6 @@ public class WelcomeToTheDungeon extends Activity {
         Right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* if (room == 1){
-                    room=2;
-                    textView1.setText(Rooms[room]);
-                }else{} */
                 room=(room+room);
                 GoRight(textView1,Rooms);
             }});
