@@ -67,4 +67,15 @@
         app:layout_constraintEnd_toStartOf="@+id/totheright"
         app:layout_constraintStart_toEndOf="@+id/totheleft" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/gomap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/totheright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
 </android.support.constraint.ConstraintLayout>

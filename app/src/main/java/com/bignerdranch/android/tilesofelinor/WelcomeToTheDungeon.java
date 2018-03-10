@@ -51,6 +51,7 @@ public class WelcomeToTheDungeon extends Activity {
                if (room>8) {
                    room = 0;
                }
+
                Go(textView1,Rooms);
             }
         });

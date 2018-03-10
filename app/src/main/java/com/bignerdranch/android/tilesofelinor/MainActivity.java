@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
                 dungeon =  tv.getText().toString();
                 dungeon = dungeon.toLowerCase();
-                //text.setText(dungeon);
                 ToDungeon();
             }
         });
